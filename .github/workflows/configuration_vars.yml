@@ -1,14 +1,11 @@
 name: Learning Configuration Variables
-
 on:
   workflow_dispatch
-
 env:
   DAY_OF_WEEK: Monday
-
 jobs:
   greeting_job:
     runs-on: ubuntu-latest
     steps:
       - name: "Displaying Hobby"
-        run: echo "My hobby is ${{var.MY_HOBBY}}"
+        run: echo "My hobby is ${{vars.MY_HOBBY}}"
