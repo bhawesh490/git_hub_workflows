@@ -13,3 +13,4 @@ jobs:
          echo "My hobby is ${{vars.MY_HOBBY}}"
          echo "git hub ref ${{ github.ref }}"
          echo "repo name ${{ github.repository }}"
+         echo "event name ${{ github.event }}"
