@@ -1,4 +1,4 @@
-name: Greeting on variable day
+name: Learning Configuration Variables
 
 on:
   workflow_dispatch
