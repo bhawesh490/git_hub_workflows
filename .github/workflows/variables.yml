@@ -18,4 +18,14 @@ jobs:
           First_Name: Mona
       - name: "Listing Environment Variables"
         run : env
+  greeting_job_other_approach:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps:
+      - name: "Say Hello Mona it's Monday"
+        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Bhawesh
 
