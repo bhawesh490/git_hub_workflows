@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Displaying Hobby"
-        run:
+        run: |
          echo "My hobby is ${{vars.MY_HOBBY}}"
          echo "git hub ref ${{ github.ref }}"
-         exho "repo name ${{ github.repository }}"
+         echo "repo name ${{ github.repository }}"
