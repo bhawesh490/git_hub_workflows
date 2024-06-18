@@ -1,3 +1,5 @@
+#default environment variables
+# https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables
 name: Environment Variables
 on: [push]
 
@@ -15,6 +17,10 @@ jobs:
     steps:
       - name: Log ENV VAR
         run: echo $GITHUB_REF
+        #difference between using env variales and context
+        # is that $GITHUB_REF is only available in runner machine
+        # while the context github.ref is available in the workflow before sending it to runner machine
+        #so ${{ github.ref }} this part is not going to be evaluted in the runner machine but sent to runner machine
       - name: Log Context
         run: echo '${{ github.ref }}'
       - name: log Content without inverted commas
@@ -24,6 +30,9 @@ jobs:
           STEP_LEVEL_ENV: Available to only this step
           WF_LEVEL_ENV: Overriden in step
         run: |
+          echo "we can print environment variables in different ways"
+          echo "1-using env context inside the expression.Using tie method it is evaluated in the workflow not in the runner machine therefore we can use it in ithe if condition"
+          echo "2-using $ sigh in env variables"
           echo '${{ env.STEP_LEVEL_ENV }}'
           echo $STEP_LEVEL_ENV
           echo $WF_LEVEL_ENV
