@@ -1,0 +1,20 @@
+# caller workflow
+# called workflow
+# they can live in same repository or different repositories
+# https://github.com/github-actions-course/course-code/tree/0c15849b7db378b47b9f3c4194bd1b989b40c0c3
+name: 13_Calling Reusable Workflows from caller
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Input description"
+        type: string
+        default: "Bhawesh"
+        required: false
+jobs:
+  calling-a-reusable-wf:
+    uses: github.com/bhawesh490/reusable_workflow/.github/workflows/reusable.yml@main
+    with:
+      name: ${{ inputs.name }}
+    secrets:
+      access-token: ${{ secrets.ACCESS_TOKEN }}
