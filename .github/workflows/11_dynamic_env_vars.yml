@@ -1,7 +1,7 @@
 # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
 # runner machines generetaes some temp files which can be used to store env vars
 
-name: Environment Variables
+name: Dunamic Environment Variables
 on: [push]
 
 env:
