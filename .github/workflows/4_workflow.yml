@@ -21,8 +21,8 @@ jobs:
         run: pwd
       - name: Change working dir using command
         run: |
-          mkdir /home/runner/hello_world
-          cd /home/runner/hello_world && pwd
+          mkdir hello_world
+          cd hello_world && pwd
 
   display-wd-info-windows:
     runs-on: windows-latest
