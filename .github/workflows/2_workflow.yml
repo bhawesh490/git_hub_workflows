@@ -1,3 +1,4 @@
+# To Enable Debug https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging
 name: Second Workflow
 on: [push]
 
