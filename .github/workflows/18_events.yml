@@ -1,0 +1,12 @@
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+name: Repository Events
+on: [push, pull_request, issues]
+
+jobs:
+  checkout-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo $GITHUB_SHA   #git commit hash
+          echo $GITHUB_REF   #git branch where we have pushed the code to
+      - uses: actions/checkout@v3
