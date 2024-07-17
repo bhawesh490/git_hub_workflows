@@ -4,5 +4,5 @@
 4-have yaml extenstion in vs code YAML by Redhat
 5-NO double quotation in keys and values unlike in json
 6-Use # sign to comment a yaml
-7-Indentation 2 spaces are recommended
+7-Indentation 2 spaces are recommended not tabs
 8-https://learnxinyminutes.com/docs/yaml/

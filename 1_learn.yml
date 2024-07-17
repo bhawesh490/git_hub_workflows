@@ -1,0 +1,49 @@
+##################################
+#          Learning YML          #
+##################################
+
+key: value
+"key with quotes": "value with quotes"
+323: 123 # key can be a number
+special_chars: "value with special characters: !@#$%^&*()_+"
+single_quotes: "value with single quotes"
+arrays(sequences):
+  - hello
+  - world
+
+json_array: [hello, world]
+numbers: 100
+boolean: true
+
+objects(maps):
+  key1: value1
+  key2: value2
+  key3: value3
+  nested_object:
+    key1: value1
+    key2: value2
+    key3: value3
+
+json_style_object: { key1: value1, key2: value2, key3: value3 }
+
+sequence:
+  - Item 1
+  - Item 2
+  - Item 3
+  - key: value
+    key2: value2
+    key3: value3
+  - - nested array Item 1
+  - - nested array Item 2
+
+literal block: |
+  This is a literal block
+  It can span multiple lines
+  It preserves newlines
+  It preserves leading and trailing spaces
+
+folded block: >
+  This is a folded block
+  It can span multiple lines
+  It preserves newlines
+  It removes leading and trailing spaces
