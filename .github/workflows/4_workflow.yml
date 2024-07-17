@@ -4,7 +4,7 @@ on: [push]
 defaults:
   run:
     shell: bash
-    # working-directory: /de/ed
+    working-directory: /hello_world
 jobs:
   display-wd-info:
     runs-on: ubuntu-latest
