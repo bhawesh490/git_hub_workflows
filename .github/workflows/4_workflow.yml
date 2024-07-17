@@ -4,7 +4,7 @@ on: [push]
 defaults:
   run:
     shell: bash
-    working-directory: /home/runner
+    # working-directory: /home/runner
 jobs:
   display-wd-info:
     runs-on: ubuntu-latest
@@ -19,6 +19,11 @@ jobs:
       - name: Change Working Dir
         working-directory: /home/runner
         run: pwd
+      - name: Change working dir using command
+        run: |
+          mkdir /home/runner/hello_world
+          cd /home/runner/hello_world && pwd
+
   display-wd-info-windows:
     runs-on: windows-latest
     defaults:
