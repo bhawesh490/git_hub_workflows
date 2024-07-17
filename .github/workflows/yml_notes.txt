@@ -1,0 +1,8 @@
+1-Yml is data serialisation language similar to json
+2-It is a superset of json
+3-can have yaml format or yml format
+4-have yaml extenstion in vs code YAML by Redhat
+5-NO double quotation in keys and values unlike in json
+6-Use # sign to comment a yaml
+7-Indentation 2 spaces are recommended
+8-https://learnxinyminutes.com/docs/yaml/
