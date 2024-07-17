@@ -1,0 +1,11 @@
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+name: Workflow Run
+on:
+  workflow_run:
+    workflows: [Repository Events Types]
+    types: [completed]
+jobs:
+  echo-string:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I was triggered because 'Repository Events' was completed"
