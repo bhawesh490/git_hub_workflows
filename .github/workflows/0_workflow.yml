@@ -17,3 +17,8 @@ jobs:
         run: |
           echo "pwd is-->$(pwd)"
           ls
+      - name: step 4
+        run: |
+          export MY_NAME=Bhawesh
+          echo "My Name is $MY_NAME"
+
