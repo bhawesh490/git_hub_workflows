@@ -1,0 +1,19 @@
+name: can_steps_access_each_others
+on: [push]
+run-name: can_steps_access_each_others
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1:echo a string
+        run: echo "Hello World"
+      - name: step 2:Multiline Command
+        run: |
+          echo 'pwd is-->$(pwd)'
+          ls
+          touch bhawesh.txt
+          ls
+      - name: step 3:listing files
+        run: |
+          echo 'pwd is-->$(pwd)'
+          ls
