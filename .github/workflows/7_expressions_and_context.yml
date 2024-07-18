@@ -1,5 +1,6 @@
 # https://docs.github.com/en/actions/learn-github-actions/contexts
 # https://docs.github.com/en/actions/learn-github-actions/expressions
+# inside dollar{{}} we can put expression
 name: Expressions & Contexts
 on: [push, pull_request, issues, workflow_dispatch]
 run-name: "Expressions & Contexts by @${{ github.actor }}, event: ${{ github.event_name }}"
@@ -20,8 +21,8 @@ jobs:
           echo ${{ true || (false && true) }}
       - name: Dump Contexts
         run: |
-          echo '${{ toJson(github) }}'
+          echo '${{ toJson(github) }}'  #contains information about github repo,workflow,actor,etc
           echo '${{ toJson(job) }}'
           echo '${{ toJson(secrets) }}'
           echo '${{ toJson(steps) }}'
-          echo '${{ toJson(runner) }}'
+          echo '${{ toJson(runner) }}'  #contains information about runner
