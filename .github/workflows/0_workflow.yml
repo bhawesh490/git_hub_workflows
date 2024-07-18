@@ -5,15 +5,15 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: step 1:echo a string
+      - name: step 1
         run: echo "Hello World"
-      - name: step 2:Multiline Command
+      - name: step 2
         run: |
-          echo 'pwd is-->$(pwd)'
+          echo "pwd is-->$(pwd)"
           ls
           touch bhawesh.txt
           ls
-      - name: step 3:listing files
+      - name: step 3
         run: |
-          echo 'pwd is-->$(pwd)'
+          echo "pwd is-->$(pwd)"
           ls
