@@ -2,7 +2,7 @@
 # https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables
 name: Environment Variables
 on: [push]
-
+run-name: Accessing Environment Variables
 env:
   WF_LEVEL_ENV: Available to all jobs
 
@@ -35,5 +35,7 @@ jobs:
           echo "2-using $ sigh in env variables"
           echo '${{ env.STEP_LEVEL_ENV }}'
           echo $STEP_LEVEL_ENV
+          echo "accessing wf level env variable using env context: ${{env.WF_LEVEL_ENV}}"
           echo $WF_LEVEL_ENV
+          echo "accessing Job level env variable using env context: ${{env.JOB_LEVEL_ENV}}"
           echo $JOB_LEVEL_ENV

@@ -17,6 +17,7 @@ jobs:
         run: |
           echo "pwd is-->$(pwd)"
           ls
+          #bhawesh.txt file is available in this step
       - name: step 4
         run: |
           export MY_NAME=Bhawesh
@@ -24,4 +25,5 @@ jobs:
       - name: step 5
         run: |
           echo "My Name is $MY_NAME"
+          #name environment variable is not available in this step
 
