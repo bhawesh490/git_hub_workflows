@@ -21,4 +21,8 @@ jobs:
         run: |
           export MY_NAME=Bhawesh
           echo "My Name is $MY_NAME"
+          - name: step 4
+      - name: step 5
+        run: |
+          echo "My Name is $MY_NAME"
 
