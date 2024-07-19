@@ -31,7 +31,7 @@ on:
 
 jobs:
   log-info:
-    runs-on: [ orchestrator-runner ]
+    runs-on: [ ubuntu-latest ]
     steps:
       - run: echo $GITHUB_REF
       - run: |
