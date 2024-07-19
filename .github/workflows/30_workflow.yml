@@ -1,0 +1,41 @@
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+name: Manually Triggered
+run-name: Workflow-4
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      string:
+        description: A string input
+        type: string
+        required: true
+        default: "Jordi"
+      number:
+        description: A number input
+        default: 4
+        type: number
+      option:
+        description: "An Options Input"
+        required: true
+        default: "Coffee"
+        type: choice
+        options:
+          - "Coffee"
+          - "Tea"
+          - "Softdrink"
+      boolean:
+        description: A boolean option
+        required: false
+        type: boolean
+
+
+jobs:
+  log-info:
+    runs-on: [ orchestrator-runner ]
+    steps:
+      - run: echo $GITHUB_REF
+      - run: |
+          echo "String: ${{ inputs.string }}"
+          echo "Number: ${{ inputs.number }}"
+          echo "Option: ${{ inputs.option }}"
+          echo "Boolean: ${{ inputs.boolean }}"
