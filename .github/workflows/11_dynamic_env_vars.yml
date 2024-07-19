@@ -1,7 +1,7 @@
 # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-an-environment-variable
 # runner machines generetaes some temp files which can be used to store env vars
-
-name: Dunamic Environment Variables
+#s so this was we can dynamically define enviornment variables also
+name: Dynamic Environment Variables
 on: [push]
 
 env:
@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "NEW_ENV_VAR=$(date)" >> "$GITHUB_ENV"
           echo "JOB_LEVEL_ENV=$RANDOM" >> "$GITHUB_ENV"
-          echo "Now the above env vars are available to all sthe subsequent steps in this job not in the same step"
+          echo "Now the above env vars are available to all the subsequent steps in this job not in the same step where this env is defined"
       - name: Multiline ENV Var
         run: |
           echo "DELIMITER is a variable"

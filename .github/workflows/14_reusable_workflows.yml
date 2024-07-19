@@ -17,4 +17,6 @@ jobs:
     with:
       name: ${{ inputs.name }}
     secrets:
-      access-token: ${{ secrets.ACCESS_TOKEN }}
+      access-token: ${{ secrets.ACCESS_TOKEN }}   #Repository secrets
+    # secrets: inherit
+    #passes all the secrets from the caller workflow to the called workflow

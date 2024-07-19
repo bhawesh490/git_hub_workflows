@@ -2,7 +2,7 @@
 # called workflow
 # they can live in same repository or different repositories
 # https://github.com/github-actions-course/course-code/tree/0c15849b7db378b47b9f3c4194bd1b989b40c0c3
-name: 13_Calling Reusable Workflows from caller
+name: 13_Calling Reusable Workflows(Called Workflow) from caller
 on:
   workflow_dispatch:
     inputs:
@@ -17,4 +17,4 @@ jobs:
     with:
       name: ${{ inputs.name }}
     secrets:
-      access-token: ${{ secrets.ACCESS_TOKEN }}
+      access-token: ${{ secrets.ACCESS_TOKEN }} #Repository secrets

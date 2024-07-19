@@ -1,5 +1,6 @@
 # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
 name: Manually Triggered
+run-name: "Manually Triggered by @${{ github.actor }}, event: ${{ github.event_name }}"
 on:
   workflow_dispatch:
     inputs:
