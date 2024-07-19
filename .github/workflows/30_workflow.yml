@@ -1,6 +1,6 @@
 # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
-name: Manually Triggered
-run-name: Workflow-4
+name: Manually Triggered Workflow Test
+run-name: Workflow-Test
 on:
   push:
   workflow_dispatch:
